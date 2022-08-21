@@ -3,20 +3,21 @@ using namespace std;
 
 // *****************T.C O(logN) or <  O(logN)************
 
-void solve(int a, int n)
+void solve(int base, int power)
 {
     int res = 1;
-    while (n)
+    while (power)
     {
-        if (!(n & 1))
+        if (power & 1)
         {
-            a *= a, n /= 2;
-            res *= a;
-            n--;
-            continue;
+            res = res * base;
+            power--;
         }
-        res *= a;
-        n--;
+        else
+        {
+            base = base * base;
+            power /= 2;
+        }
     }
     cout << res << endl;
 }
@@ -28,3 +29,18 @@ int main()
     solve(a, n);
     return 0;
 }
+
+// int res = 1;
+// while (n)
+// {
+//     if (!(n & 1))
+//     {
+//         a *= a, n /= 2;
+//         res *= a;
+//         n--;
+//         continue;
+//     }
+//     res *= a;
+//     n--;
+// }
+// cout << res << endl;

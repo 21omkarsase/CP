@@ -5,6 +5,7 @@ void solve(int n)
 {
     for (int i = 2; i * i <= n; i++)
     {
+        // if n is composite then at least one prime divisor is present below sqrt(N)
         if (!(n % i))
         {
             int cnt = 0;
@@ -13,7 +14,7 @@ void solve(int n)
             cout << "( " << i << " ^ " << cnt << " ) + ";
         }
     }
-    if (n > 1)
+    if (n > 1) // if for loop completed and n is still greater than 1 then it indicates n is prime
         cout << "( " << n << " ^ " << 1 << " ) + ";
 }
 

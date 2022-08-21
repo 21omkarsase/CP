@@ -1,0 +1,5 @@
+(1)*********Taking input********
+vec.resize(n);
+for (auto& c : vec) cin >> c;
+	
+	

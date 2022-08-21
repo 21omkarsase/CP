@@ -21,7 +21,7 @@ void solve()
 int main()
 {
     int t = 1;
-    cin >> t;
+    // cin >> t;
 
     isPrime[0] = isPrime[1] = 1;
 
