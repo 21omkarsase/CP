@@ -2,4 +2,6 @@
 vec.resize(n);
 for (auto& c : vec) cin >> c;
 	
+(2)**********Max element*********
+*max_element(v.begin(),v.end())
 	
